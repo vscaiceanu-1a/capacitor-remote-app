@@ -11,7 +11,7 @@ export class AppComponent {
   title = 'cap-remote-app';
 
   public async ngOnInit() {
-    console.log('keys for capacitor', JSON.stringify(await Storage.keys()));
     console.log('device info', JSON.stringify(await Device.getInfo()));
+    console.log('keys for capacitor', JSON.stringify(await Storage.keys()));
   }
 }
