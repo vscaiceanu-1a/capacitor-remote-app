@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "server": "cd dist/cap-remote-app && angular-http-server",
+    "start": "npm run build && npm run server",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -20,6 +21,7 @@
     "@angular/router": "~13.1.0",
     "@capacitor/core": "^3.4.1",
     "@capacitor/storage": "^1.2.4",
+    "angular-http-server": "^1.10.0",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
