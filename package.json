@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "server": "cd dist/cap-remote-app && angular-http-server",
-    "start": "npm run build && npm run server",
+    "start": "npm install && npm run build && npm run server",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
