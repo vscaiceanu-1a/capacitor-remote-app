@@ -3,17 +3,19 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "server": "cd dist/cap-remote-app && angular-http-server",
-    "start": "npm install && npm run build && npm run server",
+    "start" : "node server.js",
     "build": "ng build",
+    "heroku-postbuild": "npm run build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~13.1.0",
+    "@angular/cli": "~13.1.2",
     "@angular/common": "~13.1.0",
     "@angular/compiler": "~13.1.0",
+    "@angular/compiler-cli": "~13.1.0",
     "@angular/core": "~13.1.0",
     "@angular/forms": "~13.1.0",
     "@angular/platform-browser": "~13.1.0",
@@ -22,8 +24,11 @@
     "@capacitor/core": "^3.4.1",
     "@capacitor/storage": "^1.2.4",
     "angular-http-server": "^1.10.0",
+    "express": "^4.17.3",
+    "path": "^0.12.7",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
+    "typescript": "~4.5.2",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
