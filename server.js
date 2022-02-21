@@ -7,4 +7,10 @@ app.get('/*', function(req,res) {
     res.sendFile(path.join(__dirname + '/dist/cap-remote-app/index.html'));}
   );
 
+app.post('/*', function(req,res) {
+    res.sendFile(path.join(__dirname + '/dist/cap-remote-app/index.html'));}
+  );
+
+
+
 app.listen(process.env.PORT || 8080);
